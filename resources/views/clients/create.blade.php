@@ -32,7 +32,7 @@
             </div>
           
             <div class="form-group mt-3  mx-5">
-                <select class="form-select" name="services" multiple>
+                <select class="form-select" name="services[]" multiple="multiple" required>
                     <option value="Social Media">Social Media</option>
                     <option value="CRM">CRM</option>
                     <option value="Mídia">Mídia</option>

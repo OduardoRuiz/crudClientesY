@@ -30,7 +30,7 @@
                 <input type="text" name="company" class="form-control  " required value="{{$client->company}}">
             </div>
             <div class="form-group mt-3  mx-5">
-                <select class="form-select" name="services" multiple>
+                <select class="form-select" name="services[]" multiple>
                     <option value="Social Media">Social Media</option>
                     <option value="CRM">CRM</option>
                     <option value="Mídia">Mídia</option>
