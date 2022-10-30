@@ -7,60 +7,68 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## 💻 Pré-requisitos
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Antes de começar, verifique se você atende aos seguintes requisitos:
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+* php 
+* Laravel 
+* Desenvolvido em sistema Windonws
+* Xampp (ou similar)
+* IDE
+* MySQL
 
-## Learning Laravel
+## 🚀 Instalando o projeto
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+git clone https://github.com/OduardoRuiz/crudClientesY.git
 
-## Laravel Sponsors
+configurar o arquivo ".env-example" com suas credencias de banco de dados + nome 
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+composer install 
 
-### Premium Partners
+php artisan migrate
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+npm install 
 
-## Contributing
+npm run dev
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+php artisan serve
 
-## Code of Conduct
+----------------------------------------------
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+É necessario realizar um cadastro para utilizar o projeto. 
+![image](https://user-images.githubusercontent.com/59852595/198861130-b329b384-830c-4f82-9aee-4441d62dc01f.png)
 
-## Security Vulnerabilities
+Para realizar o cadastro clique no link indicado na imagem acima 
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
 
-## License
+Após o login você será direcionado para pagina principal "index" 
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+![image](https://user-images.githubusercontent.com/59852595/198861148-a60b4771-1d63-4bcf-89bc-0beec230c32c.png)
+
+Para criar um novo cadastro clique no botão "cadastrar cliente"
+
+![image](https://user-images.githubusercontent.com/59852595/198861182-ccd593f9-b148-4784-ade2-2306ab592890.png)
+
+É necessario inserir todas as informações pois os campos estão como "required".
+É possivel selecionar mais de um serviço contratado, segurando a tecla "CRTL" no teclado
+
+Ao finalizar o cadastro você será direcionado de volta á pagina principal.
+
+Clicando no botão mostrar todos os clientes, será exibida uma lista com todos os clientes cadastrados
+
+![image](https://user-images.githubusercontent.com/59852595/198861562-ab259b5b-277a-4672-9f5e-844a9996b2e8.png)
+
+Você pode apagar um cadastro, editar ou visualizar as informações dos cadastro clicando nos botões laterais
+
+Ao clicar no botão "visualizar" é exibido um card com as informações (imagem abaixo)
+
+![image](https://user-images.githubusercontent.com/59852595/198861503-c2fd96b6-e6f9-4c06-9207-e240726b0708.png)
+
+
+
+
+
