@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Cliente;
+use Hamcrest\Core\HasToString;
 use Illuminate\Http\Request;
+use Symfony\Component\Console\Input\Input;
 
 use function GuzzleHttp\Promise\all;
 
@@ -18,7 +20,7 @@ class ClienteController extends Controller
     {
         return view('clients.show')->with('client', $client);
     }
-    public function showAll() 
+    public function showAll()
     {
         return view('clients.showAll')->with('clients', Cliente::all());
     }
@@ -30,29 +32,31 @@ class ClienteController extends Controller
 
     public function store(Request $request)
     {
-        Cliente::create($request->all()); 
-        session()->flash('success','Cliente cadastrado com sucesso');
+        $input = $request->all();
+        $services = $input['services'];
+        $input['services'] = implode(',', $services);
+        Cliente::create($input);
+        session()->flash('success', 'Cliente cadastrado com sucesso');
         return redirect(route('client.index'));
-
     }
     public function edit(Cliente $client)
     {
-        return view('clients.edit')->with('client',$client);
+        return view('clients.edit')->with('client', $client);
     }
     public function update(Request $request, Cliente $client)
     {
-        $client->update($request->all());
-        session()->flash('success','Cliente cadastrado com sucesso');
+        $input = $request->all();
+        $services = $input['services'];
+        $input['services'] = implode(',', $services);
+        $client->update($input);
+        session()->flash('success', 'Cliente cadastrado com sucesso');
         return redirect(route('client.showAll'));
     }
 
     public function destroy(Cliente $client)
     {
         $client->delete();
-        session()->flash('danger', 'Cliente apagado com sucesso!');
+        session()->flash('success', 'Cliente apagado com sucesso!');
         return redirect(route('client.showAll'));
     }
-
-    
-
 }
